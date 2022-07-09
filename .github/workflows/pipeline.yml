@@ -16,7 +16,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: build
-        run: cd frontend && npm run build && cp -r build ../build
+        run: cd frontend && npm install && npm run build && cp -r build ../build
 
       - name: Heroku deploy
         uses: akhileshns/heroku-deploy@v3.12.12 
