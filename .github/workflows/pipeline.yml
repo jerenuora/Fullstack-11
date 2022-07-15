@@ -19,6 +19,11 @@ jobs:
         run: cd frontend && npm install && npm run build && cp -r build ../build
         env: 
           SKIP_PREFLIGHT_CHECK: true
+                - name: test
+        run: npm run test
+      - name: test
+        run: npm run test
+
       - name: Heroku deploy
         uses: akhileshns/heroku-deploy@v3.7.8
         with:
